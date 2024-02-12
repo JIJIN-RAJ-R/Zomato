@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:zomato/view/menu.dart';
 
 class LoginPage extends StatefulWidget {
@@ -8,6 +9,8 @@ class LoginPage extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
+
+final TextEditingController _mobileTextcontroller = TextEditingController();
 
 class _LoginPageState extends State<LoginPage> {
   @override
@@ -43,30 +46,26 @@ class _LoginPageState extends State<LoginPage> {
                                 color: Colors.white,
                               ),
                             ),
-                            
                           ),
-                        )
-                        ,
-                        
+                        ),
                         Container(
-                         
-                          padding: const EdgeInsets.only(top:30,right: 20),
-                          alignment: Alignment.topRight,
-                          child: ElevatedButton(onPressed: (){
-                            Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => const menuPage(),)
-                            );
-                            
-                          },
-                          
-                         style:  ElevatedButton.styleFrom(
-              minimumSize: const Size(8, 30),backgroundColor: Colors.black45), child: const Text('skip>',style: TextStyle(
-                            color: Colors.white
-                            
-                          ),
-                                                
-                          ))
-                        )
+                            padding: const EdgeInsets.only(top: 30, right: 20),
+                            alignment: Alignment.topRight,
+                            child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const menuPage(),
+                                      ));
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    minimumSize: const Size(8, 30),
+                                    backgroundColor: Colors.black45),
+                                child: const Text(
+                                  'skip>',
+                                  style: TextStyle(color: Colors.white),
+                                )))
                       ],
                     ),
                   ],
@@ -98,7 +97,9 @@ class _LoginPageState extends State<LoginPage> {
               child: Row(
                 children: [
                   Expanded(
+                    // input mobile number
                     child: TextField(
+                      // controller: _mobileTextcontroller,
                       decoration: InputDecoration(
                         labelText: 'Enter Mobile Number',
                         border: OutlineInputBorder(
@@ -132,67 +133,58 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const Text('_____ or ______'),
             Padding(
-              padding: const EdgeInsets.only(left: 20,right: 20 ,top: 15),
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(7)
-                    ),
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(7)),
                     width: 50,
-                    child: Image.network('http://pngimg.com/uploads/google/google_PNG19635.png'),
+                    child: Image.network(
+                        'http://pngimg.com/uploads/google/google_PNG19635.png'),
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(7)
-                    ),
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(7)),
                     width: 50,
                     height: 50,
-              
-                    child: Image.network('https://cdn.freebiesupply.com/images/thumbs/2x/apple-logo.png'),
+                    child: Image.network(
+                        'https://cdn.freebiesupply.com/images/thumbs/2x/apple-logo.png'),
                   ),
                   Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      
-                      borderRadius: BorderRadius.circular(7)
-                      
-                    ),
-                    child: const Icon(Icons.more_horiz)),
-                  
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey),
+                          borderRadius: BorderRadius.circular(7)),
+                      child: const Icon(Icons.more_horiz)),
                 ],
               ),
-              
             ),
             const SizedBox(
               height: 45,
             ),
             const Text('By Continuing,You agree to our'),
             const Row(
-              
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text('Terms of Service',
-                style: TextStyle(
-                  decoration: TextDecoration.underline
-                ),),
-                Text('Privacy policy',
-                style: TextStyle(
-                  decoration: TextDecoration.underline
-                ),),
-                Text('Content Policies',
-                style: TextStyle(
-                  decoration: TextDecoration.underline
-                ),)
+                Text(
+                  'Terms of Service',
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
+                Text(
+                  'Privacy policy',
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
+                Text(
+                  'Content Policies',
+                  style: TextStyle(decoration: TextDecoration.underline),
+                )
               ],
             )
-          
           ],
         ),
       ),

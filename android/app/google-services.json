@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "244034904592",
+    "project_id": "zomatofirebase-7464a",
+    "storage_bucket": "zomatofirebase-7464a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244034904592:android:1e8c3d3e8befd331ae6095",
+        "android_client_info": {
+          "package_name": "com.example.zomato"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQeE079DgBQUQgmMU458OprAzFA23l498"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -31,7 +31,7 @@ class _homepageState extends State<homepage> {
               minimumSize: const Size(20, 30),
               padding: const EdgeInsets.all(10),
             ),
-          child:  const Text(
+            child: const Text(
               'skip >',
               style: TextStyle(color: Colors.white),
             ),
