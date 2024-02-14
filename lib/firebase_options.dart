@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBvJ73fXkN_88JMZ44lxAiaosto71RGYKU',
-    appId: '1:244034904592:web:e8013c1ccd0ff0d6ae6095',
-    messagingSenderId: '244034904592',
-    projectId: 'zomatofirebase-7464a',
-    authDomain: 'zomatofirebase-7464a.firebaseapp.com',
-    storageBucket: 'zomatofirebase-7464a.appspot.com',
-    measurementId: 'G-5E3Q4N0MW1',
+    apiKey: 'AIzaSyA7yXa7PUbqsiGT6s7u6NTiY11uS9w_rdI',
+    appId: '1:339430727145:web:cf6c3d7f735ab47320bf78',
+    messagingSenderId: '339430727145',
+    projectId: 'auth-3d057',
+    authDomain: 'auth-3d057.firebaseapp.com',
+    storageBucket: 'auth-3d057.appspot.com',
+    measurementId: 'G-1KXK4782KG',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDQeE079DgBQUQgmMU458OprAzFA23l498',
-    appId: '1:244034904592:android:1e8c3d3e8befd331ae6095',
-    messagingSenderId: '244034904592',
-    projectId: 'zomatofirebase-7464a',
-    storageBucket: 'zomatofirebase-7464a.appspot.com',
+    apiKey: 'AIzaSyAWnPFGjGx3pm3iJlEXJV0aKfCCEJXbh7s',
+    appId: '1:339430727145:android:6c04f47427aa197120bf78',
+    messagingSenderId: '339430727145',
+    projectId: 'auth-3d057',
+    storageBucket: 'auth-3d057.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCKKnRFWTLUmCmhtXM6bMmUWGu375aJmSQ',
-    appId: '1:244034904592:ios:87d9fba3b90e8c25ae6095',
-    messagingSenderId: '244034904592',
-    projectId: 'zomatofirebase-7464a',
-    storageBucket: 'zomatofirebase-7464a.appspot.com',
+    apiKey: 'AIzaSyDRaOlwRQjE-S8RiiXkenelijsPfHyYG1s',
+    appId: '1:339430727145:ios:3076fb47726908eb20bf78',
+    messagingSenderId: '339430727145',
+    projectId: 'auth-3d057',
+    storageBucket: 'auth-3d057.appspot.com',
     iosBundleId: 'com.example.zomato',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCKKnRFWTLUmCmhtXM6bMmUWGu375aJmSQ',
-    appId: '1:244034904592:ios:278c7b1f28d260b4ae6095',
-    messagingSenderId: '244034904592',
-    projectId: 'zomatofirebase-7464a',
-    storageBucket: 'zomatofirebase-7464a.appspot.com',
+    apiKey: 'AIzaSyDRaOlwRQjE-S8RiiXkenelijsPfHyYG1s',
+    appId: '1:339430727145:ios:05342b2b5bb26dfa20bf78',
+    messagingSenderId: '339430727145',
+    projectId: 'auth-3d057',
+    storageBucket: 'auth-3d057.appspot.com',
     iosBundleId: 'com.example.zomato.RunnerTests',
   );
 }

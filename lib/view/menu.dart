@@ -4,14 +4,15 @@ import 'package:zomato/controller/rating.dart';
 import 'package:like_button/like_button.dart';
 import 'package:zomato/view/user.dart';
 
+// ignore: camel_case_types
 class menuPage extends StatelessWidget {
-  const menuPage({super.key});
+  const menuPage({super.key, required String email});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: FaIcon(FontAwesomeIcons.locationArrow),
+        leading: const FaIcon(FontAwesomeIcons.locationArrow),
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -42,7 +43,7 @@ class menuPage extends StatelessWidget {
                   ),
                 );
               },
-              icon: FaIcon(
+              icon: const FaIcon(
                 FontAwesomeIcons.user,
                 color: Colors.blueAccent,
               ))
@@ -50,7 +51,7 @@ class menuPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               const SizedBox(
@@ -70,7 +71,7 @@ class menuPage extends StatelessWidget {
                 )),
               ),
               Container(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -187,7 +188,7 @@ class menuPage extends StatelessWidget {
                 '____ For you ____',
                 style: TextStyle(color: Colors.red),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               SingleChildScrollView(
@@ -196,7 +197,7 @@ class menuPage extends StatelessWidget {
                   children: [
                     Row(children: [
                       Container(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           alignment: Alignment.topRight,
                           height: 150,
                           width: 150,
@@ -208,15 +209,15 @@ class menuPage extends StatelessWidget {
                                 ),
                                 fit: BoxFit.cover),
                           ),
-                          child: FaIcon(
+                          child: const FaIcon(
                             FontAwesomeIcons.heart,
                             color: Colors.white,
                           )),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           alignment: Alignment.topRight,
                           height: 150,
                           width: 150,
@@ -228,15 +229,15 @@ class menuPage extends StatelessWidget {
                                 ),
                                 fit: BoxFit.cover),
                           ),
-                          child: FaIcon(
+                          child: const FaIcon(
                             FontAwesomeIcons.heart,
                             color: Colors.white,
                           )),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           alignment: Alignment.topRight,
                           height: 150,
                           width: 150,
@@ -252,11 +253,11 @@ class menuPage extends StatelessWidget {
                             FontAwesomeIcons.heart,
                             color: Colors.white,
                           )),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
                       Container(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           alignment: Alignment.topRight,
                           height: 150,
                           width: 150,
@@ -276,7 +277,7 @@ class menuPage extends StatelessWidget {
                         width: 12,
                       ),
                       Container(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           alignment: Alignment.topRight,
                           height: 150,
                           width: 150,
@@ -288,7 +289,7 @@ class menuPage extends StatelessWidget {
                                 ),
                                 fit: BoxFit.cover),
                           ),
-                          child: LikeButton(
+                          child: const LikeButton(
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                           )),
@@ -296,60 +297,60 @@ class menuPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               const Text("FEATURED"),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Container(
-                // height: 700,
-                child: Column(
-                  children: [
-                    Card(
-                      child: Column(
-                        children: [
-                          Image.network(
-                            'https://b.zmtcdn.com/data/dish_photos/2f0/2f6811baef3b77d52b1adfce648032f0.png',
-                            fit: BoxFit.cover,
-                          ),
-                          Container(
-                              child: const Row(children: [
+              Column(
+                children: [
+                  Card(
+                    child: Column(
+                      children: [
+                        Image.network(
+                          'https://b.zmtcdn.com/data/dish_photos/2f0/2f6811baef3b77d52b1adfce648032f0.png',
+                          fit: BoxFit.cover,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Row(children: [
                             Text(
                               'Al Hasan Family\n Retaurant',
                               style: TextStyle(
                                   fontSize: 22, fontWeight: FontWeight.w900),
                             ),
                             ratingstar(),
-                          ])),
-                        ],
-                      ),
+                          ]),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Card(
-                      child: Column(
-                        children: [
-                          Image.network(
-                            'https://t3.ftcdn.net/jpg/03/90/16/96/360_F_390169691_IO5xBTYU6PIw8Ms1W5AHp0zx5R153WHB.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                          Container(
-                              child: const Row(children: [
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Card(
+                    child: Column(
+                      children: [
+                        Image.network(
+                          'https://t3.ftcdn.net/jpg/01/25/27/80/360_F_125278071_4ZoPYg9l60aBag3ZSMxQRfcpyMsQLguG.jpg'
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Row(children: [
                             Text(
-                              'Al Hasan Family\n Retaurant',
+                              'Thaqua\n Retaurant',
                               style: TextStyle(
                                   fontSize: 22, fontWeight: FontWeight.w900),
                             ),
                             ratingstar(),
-                          ])),
-                        ],
-                      ),
+                          ]),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               )
             ],
           ),

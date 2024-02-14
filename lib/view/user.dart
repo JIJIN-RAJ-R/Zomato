@@ -1,6 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:zomato/view/LoginPage.dart';
 
+// ignore: camel_case_types
 class user_page extends StatelessWidget {
   const user_page({super.key});
 
@@ -8,14 +12,16 @@ class user_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: FaIcon(FontAwesomeIcons.user,
+        size: 50,),
         leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: FaIcon(FontAwesomeIcons.arrowLeft)),
+            icon: const FaIcon(FontAwesomeIcons.arrowLeft)),
         bottom: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Colors.green[100],
+          // backgroundColor: Colors.green[100],
           toolbarHeight: 140,
           title: Card(
             child: Column(children: [
@@ -47,7 +53,7 @@ class user_page extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.w600, color: Colors.yellow),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 70,
                       ),
                       const Text(
@@ -63,47 +69,67 @@ class user_page extends StatelessWidget {
           ),
         ),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   labelText: 'Name',
                   border: OutlineInputBorder(
                       borderSide: BorderSide(),
                       borderRadius: BorderRadius.all(Radius.circular(16)))),
             ),
-            SizedBox(
+           const  SizedBox(
               height: 20,
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   labelText: 'Mobile',
                   border: OutlineInputBorder(
                       borderSide: BorderSide(),
                       borderRadius: BorderRadius.all(Radius.circular(16)))),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(
                       borderSide: BorderSide(),
                       borderRadius: BorderRadius.all(Radius.circular(16)))),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   labelText: 'Date of birth',
                   border: OutlineInputBorder(
                       borderSide: BorderSide(),
                       borderRadius: BorderRadius.all(Radius.circular(16)))),
-            )
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                try {
+                  await FirebaseAuth.instance.signOut();
+                  // ignore: use_build_context_synchronously
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPage(),
+                      ),
+                      (route) => false);
+                } catch (e) {
+                 print("Error signing out: $e");
+                }
+              },
+              child: const Text('Log out'),
+            ),
           ],
         ),
       ),
